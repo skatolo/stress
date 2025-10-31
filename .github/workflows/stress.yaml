@@ -8,7 +8,7 @@ jobs:
         # strategy:
         #   matrix:
         #     counmt: [1, 2, 3, 4, 5]
-        runs-on: actuated-500mcpu-1gb
+        runs-on: actuated-1cpu-1gb
         steps:
         - name: Install
           run: sudo apt install stress-ng -y

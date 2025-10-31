@@ -7,10 +7,10 @@ jobs:
     stress:
         strategy:
           matrix:
-            count: [1, 2]
-        runs-on: actuated-250mcpu-1gb
+            count: [1 ]
+        runs-on: actuated-2cpu-1gb
         steps:
         - name: Install
           run: sudo apt install stress-ng -y
         - name: Stress
-          run: stress-ng --cpu 1 --cpu-load 100 --timeout 2m
+          run: stress-ng --cpu 2 --cpu-load 100 --timeout 2m

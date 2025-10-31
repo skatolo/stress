@@ -1,0 +1,16 @@
+name: stress
+
+on:
+    workflow_dispatch:
+
+jobs:
+    stress:
+        # strategy:
+        #   matrix:
+        #     counmt: [1, 2, 3, 4, 5]
+        runs-on: actuated-500mcpu-1gb
+        steps:
+        - name: Install
+          run: sudo apt install stress-ng
+        - name: Stress
+          run: stress-ng --cpu 1 --cpu-load 100 --timeout 30s
